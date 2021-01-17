@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-app-bar color="#3a6ba5" dark app>
+      <v-toolbar-title class="font-weight-bold">PORTFOLIO</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="d-md-flex">
+        <v-btn text>HOME</v-btn>
+        <v-divider inset vertical></v-divider>
+        <v-btn text>ABOUT</v-btn>
+        <v-divider inset vertical></v-divider>
+        <v-btn text>CONTACT</v-btn>
+      </v-toolbar-items>
+    </v-app-bar>
+    <v-main>
+      <Top />
+    </v-main>
+    <v-footer color="#3a6ba5" dark app class="font-weight-bold"
+      >@Mai Sasaki</v-footer
+    >
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Top from "./components/Top";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Top,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
